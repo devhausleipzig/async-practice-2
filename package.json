@@ -1,0 +1,11 @@
+{
+  "name": "async-practice-2",
+  "version": "1.0.0",
+  "description": "```js\r axios\r   .get(\"https://api.chucknorris.io/jokes/random\")\r   .then((res) => {\r     console.log(\"Did you know\", res.data.value);\r   })\r   .catch((error) => {\r     console.error(\"Couldn't reach the API\");\r   });\r ```",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
