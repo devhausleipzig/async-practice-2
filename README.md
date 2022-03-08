@@ -159,4 +159,4 @@ async function printChuckNorrisJokes(count) {
 
 ## Challenge
 
-<https://github.com/gabrielheinrich/async-await-exercise/>
+https://github.com/devhausleipzig/async-await-exercise
