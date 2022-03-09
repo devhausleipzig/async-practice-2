@@ -11,7 +11,11 @@ axios
   });
 ```
 
-## Problem: Nesting
+## Problem: Nesting for calls that must be sequential
+
+Let's say there is an API that only allows a maximum of 1 call per second. So you must make your multiple calls sequentially.
+
+Something like this:
 
 ```js
 axios
@@ -47,7 +51,7 @@ There's got to be a better way
 
 ### Solution 1: Promise.all
 
-Takes in an array of promises and returns a promise which will resolve to an array of values
+Takes in an array of promises and returns a promise which will resolve to an array of values.
 
 ```js
 Promise.all([
@@ -68,9 +72,13 @@ Promise.all([
   });
 ```
 
+The caveat? All 3 calls will happen in parallel.
+
+
 ### Solution 2 : async await
 
-New language feature, available in specifically marked async functions
+New language feature, available in functions marked as async.
+
 
 ```js
 async function main() {
@@ -156,6 +164,9 @@ async function printChuckNorrisJokes(count) {
   }
 }
 ```
+
+Ahh, there we go. Nice and sequential. Bonus challenge: can you make the above code cleaner by using a reducer?
+
 
 ## Challenge
 
